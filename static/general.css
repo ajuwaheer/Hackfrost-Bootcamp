@@ -228,6 +228,7 @@ nav #menu {
     width: 325px;
     height: 200px;
     border-radius: 20px;
+    box-shadow: 1px 1px 8px 1px var(--light-mode-black);
 }
 
 .blog .blogContainer .blogLayout .blogTitle {

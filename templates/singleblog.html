@@ -12,7 +12,7 @@
                 {% else %}
                     <img src="/static/assets/profile.svg" alt="NA" class="authorImage" />
                 {% endif %}
-                <div class="authorName">By {{ blog.authorName }}</div>
+                <div class="authorName">By {% if blog.authorName %}{{ blog.authorName }}{% else %}Admin{% endif %}</div>
             </div>
             <div class="shareButton">
                 <div class="shareText">Share:</div>
