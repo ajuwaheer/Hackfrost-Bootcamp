@@ -4,7 +4,7 @@
     <div class="singleblog">
         <div class="header">
             <div class="title">
-                {{blog.title}}
+                {{ blog.title | safe }}
             </div>
             <div class="author">
                 {% if blog.authorImage %}
@@ -12,7 +12,7 @@
                 {% else %}
                     <img src="/static/assets/profile.svg" alt="NA" class="authorImage" />
                 {% endif %}
-                <div class="authorName">By {% if blog.authorName %}{{ blog.authorName }}{% else %}Admin{% endif %}</div>
+                <div class="authorName">By {% if blog.authorName %}{{ blog.authorName | safe }}{% else %}Admin{% endif %}</div>
             </div>
             <div class="shareButton">
                 <div class="shareText">Share:</div>
@@ -23,7 +23,7 @@
         </div>
         <img src="{{ blog.image }}" alt="" class="imageBlog">
         <div class="blogText">
-            {{ blog.content }}
+            {{ blog.content | safe }}
         </div>
     </div>
 {% endblock singleblog %}

@@ -174,7 +174,7 @@ nav #menu {
 
 .blog .quote {
     position: relative;
-    height: 300px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,8 +194,8 @@ nav #menu {
 
 .blog .quote img {
     position: absolute;
-    bottom: 3rem;
-    left: -3.0rem;
+    bottom: 2.7rem;
+    left: -3.2rem;
     animation: animateEmoji 3s infinite ease-in-out alternate;
 }
 
@@ -209,6 +209,7 @@ nav #menu {
 }
 
 .blog .blogContainer {
+    margin-bottom: 20px;
     width: 90%;
     display: inline-grid;
     justify-items: center;
@@ -217,22 +218,25 @@ nav #menu {
 }
 
 .blog .blogContainer .blogLayout {
+    background-color: var(--light-mode-gray);
+    margin: 0 5px;
+    border-radius: 10px;
     width: 325px;
     height: 450px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .blog .blogContainer .blogLayout .blogImage {
     width: 325px;
     height: 200px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 1px 1px 8px 1px var(--light-mode-black);
 }
 
 .blog .blogContainer .blogLayout .blogTitle {
-    padding: 5px 0;
+    padding: 5px 5px 0 5px;
     font-size: 1.3rem;
     font-weight: 600;
 }
@@ -240,9 +244,14 @@ nav #menu {
 .blog .blogContainer .blogLayout .blogOverview {
     text-align: justify;
     margin-bottom: 5px;
+    padding: 5px;
 }
 
 .blog .blogContainer .blogLayout .blogOverview a {
+    text-decoration: underline;
+}
+
+.blog .blogContainer .blogLayout .blogOverview a:hover {
     text-decoration: underline;
 }
 
@@ -250,6 +259,7 @@ nav #menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5px;
 }
 
 .blog .blogContainer .blogLayout .blogFooter .author {
@@ -494,6 +504,10 @@ footer .social a {
     align-items: center;
 }
 
+footer .social a:hover {
+    color: var(--accent-color);
+}
+
 footer .social a span {
     font-size: 2.5rem;
 }
@@ -515,11 +529,6 @@ footer .logo span {
 
 footer .logo span:hover {
     background: var(--accent-color);
-}
-
-footer .logo p {
-    margin-left: 10px;
-    /* color: var(--light-mode-black); */
 }
 
 /* Create Blog */

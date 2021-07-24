@@ -12,32 +12,6 @@ cur.execute("""
 cur.close()
 con.commit()
 
-# blogs = [{
-#     "id": 1,
-#     "image": "https://images.unsplash.com/photo-1569173112611-52a7cd38bea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
-#     "title": "This is a very long title text for blog 1, trying to make it long",
-#     "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error laudantium, molestiae numquam quae omnis explicabo ut? Officiis quos accusantium harum. Hello from the other side. This is justa random text, just don't care about this. Look away.",
-#     "authorImage": "https://images.unsplash.com/photo-1569173112611-52a7cd38bea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
-#     "authorName": "Me",
-#     "dateCreated": "21-04-21"
-# },
-# {"id": 2,
-#     "image": "https://images.unsplash.com/photo-1569173112611-52a7cd38bea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
-#     "title": "This is a test 2",
-#     "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error laudantium, molestiae numquam quae omnis explicabo ut? Officiis quos accusantium harum.",
-#     "authorImage": "https://images.unsplash.com/photo-1569173112611-52a7cd38bea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
-#     "authorName": "Me",
-#     "dateCreated": "21-04-21"
-# },
-# {"id": 3,
-#     "image": "https://images.unsplash.com/photo-1569173112611-52a7cd38bea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
-#     "title": "This is a test 3",
-#     "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error laudantium, molestiae numquam quae omnis explicabo ut? Officiis quos accusantium harum.",
-#     "authorImage": "https://images.unsplash.com/photo-1569173112611-52a7cd38bea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
-#     "authorName": "Me",
-#     "dateCreated": "21-04-21"
-# }]
-
 @app.route('/')
 @app.route('/home')
 def home():

@@ -20,14 +20,14 @@
                         {% if blog.title|length > 29 %}
                           {{ blog.title|truncate(33, True) }}
                         {% else %}
-                          {{ blog.title }}
+                          {{ blog.title | safe }}
                         {% endif %}
                     </div>
                     <div class="blogOverview">
                         {% if blog.content|length > 150 %}
                           {{ blog.content|truncate(150, True) }}
                         {% else %}
-                          {{ blog.content }}
+                          {{ blog.content | safe }}
                         {% endif %}
                         <a href="{{url_for('singleblog', blog_id=blog.rowid)}}">Read More</a>
                     </div>
@@ -38,10 +38,10 @@
                             {% else %}
                                 <img src="/static/assets/profile.svg" alt="NA" class="authorImage" />
                             {% endif %}
-                            <div class="blogAuthor">By {% if blog.authorName %}{{ blog.authorName }}{% else %}Admin{% endif %}
+                            <div class="blogAuthor">By {% if blog.authorName %}{{ blog.authorName | safe }}{% else %}Admin{% endif %}
                             </div>
                         </div>
-                        <div class="blogDate">{{ blog.dateCreated }}</div>
+                        <div class="blogDate">{{ blog.dateCreated | safe }}</div>
                     </div>
                 </div>
             {% endfor %}
