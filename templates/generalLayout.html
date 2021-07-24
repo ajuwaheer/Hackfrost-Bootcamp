@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='general.css') }}">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Poppins font from google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <title>Dev Boot</title>
+</head>
+<body>
+    {% include "navbar.html" %}
+    {% if type=="home" %}
+        {% block home %}{% endblock home %}
+    {% elif type=="blog" %}
+        {% block blog %}{% endblock blog %}
+    {% elif type=="singleblog" %}
+        {% block singleblog %}{% endblock singleblog %}
+    {% elif type=="about" %}
+        {% block about %}{% endblock about %}
+    {% elif type=="contact" %}
+        {% block contact %}{% endblock contact %}
+    {% elif type=="createblog" %}
+        {% block createblog %}{% endblock createblog %}
+    {% endif %}
+    {% include "footer.html" %}
+
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends "generalLayout.html" %}
+
+{% block home %}
+    <div class="home">
+        <div class="profilePic"><img src="{{ url_for('static', filename='assets/profile.svg') }}" alt=""></div>
+        <div class="hello">Hi, I'm Yudish&#128075;</div>
+        <div class="bigText">
+            <p>Building</p>
+            <p><span>amazing</span> and <span>interactive</span></p>
+            <p>websites.</p>
+        </div>
+        <div class="smallText">
+            a <span>Student</span> attending <span>MUN</span> in St John's, NL.
+        </div>
+        <a href="{{url_for('contact')}}">
+            <div class="contactLink">
+                Contact Me
+            </div>
+        </a>
+    </div>
+{% endblock home %}

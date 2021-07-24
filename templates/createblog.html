@@ -1,0 +1,29 @@
+{% extends "generalLayout.html" %}
+
+{% block createblog %}
+    <div class="createblog">
+        <div class="title">Create Blog</div>
+        <form action="{{ url_for('createblog') }}" method="POST">
+            <label for="title">Title</label>
+            <input type="text" name="title" required="" />
+
+            <label for="Content">Content</label>
+            <textarea rows="5" name="content" required="" ></textarea>
+
+            <label for="imageLink">Image Link</label>
+            <input type="text" name="imageLink" id="imageLink" required="" />
+            <img src="" alt="No Preview" srcset="" id="imagePreview" />
+
+            <label for="authorName">Author Name</label>
+            <input type="text" name="authorName" />
+
+            <label for="authorImageLink">Author Image Link</label>
+            <input type="text" name="authorImageLink" />
+
+            <input type="submit" value="Submit">
+        </form>
+        {% if message %}
+            {{ message }}
+        {% endif %}
+    </div>
+{% endblock createblog %}

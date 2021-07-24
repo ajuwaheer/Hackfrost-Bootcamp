@@ -1,0 +1,57 @@
+{% extends "generalLayout.html" %}
+
+{% block blog %}
+    <div class="blog">
+        <div class="quote">
+            <div class="quoteText">
+                " Today a reader, tomorrow a leader. "
+            </div>
+            <div class="quoteAuthor">
+                -Magaret Fuller
+            </div>
+            <img src="{{url_for('static', filename='/assets/emoji.png')}}" alt="Read" width="100px">
+        </div>
+        <div class="blogContainer">
+        
+            {% for blog in blogs %}
+                <div class="blogLayout">
+                    <img src="{{ blog.image }}" alt="NA" class="blogImage" />
+                    <div class="blogTitle">
+                        {% if blog.title|length > 29 %}
+                          {{ blog.title|truncate(33, True) }}
+                        {% else %}
+                          {{ blog.title }}
+                        {% endif %}
+                    </div>
+                    <div class="blogOverview">
+                        {% if blog.content|length > 150 %}
+                          {{ blog.content|truncate(150, True) }}
+                        {% else %}
+                          {{ blog.content }}
+                        {% endif %}
+                        <a href="{{url_for('singleblog', blog_id=blog.rowid)}}">Read More</a>
+                    </div>
+                    <div class="blogFooter">
+                        <div class="author">
+                            {% if blog.authorImage %}
+                                <img src="{{ blog.authorImage }}" alt="NA" class="authorImage" />
+                            {% else %}
+                                <img src="/static/assets/profile.svg" alt="NA" class="authorImage" />
+                            {% endif %}
+                            <div class="blogAuthor">By {% if blog.authorName %}{{ blog.authorName }}{% else %}Admin{% endif %}
+                            </div>
+                        </div>
+                        <div class="blogDate">{{ blog.dateCreated }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+
+            {% if blogs|length == 0 %}
+                <div style="border: 1px solid var(--light-mode-black); padding: 10px">
+                    Sorry, there is no blog available right now.
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+{% endblock blog %}

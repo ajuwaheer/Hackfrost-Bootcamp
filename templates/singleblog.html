@@ -1,0 +1,29 @@
+{% extends "generalLayout.html" %}
+
+{% block singleblog %}
+    <div class="singleblog">
+        <div class="header">
+            <div class="title">
+                {{blog.title}}
+            </div>
+            <div class="author">
+                {% if blog.authorImage %}
+                    <img src="{{ blog.authorImage }}" alt="NA" class="authorImage" />
+                {% else %}
+                    <img src="/static/assets/profile.svg" alt="NA" class="authorImage" />
+                {% endif %}
+                <div class="authorName">By {{ blog.authorName }}</div>
+            </div>
+            <div class="shareButton">
+                <div class="shareText">Share:</div>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.url }}" target="_blank">
+                    <span class="material-icons material-icons-outlined">facebook</span>
+                </a>
+            </div>
+        </div>
+        <img src="{{ blog.image }}" alt="" class="imageBlog">
+        <div class="blogText">
+            {{ blog.content }}
+        </div>
+    </div>
+{% endblock singleblog %}

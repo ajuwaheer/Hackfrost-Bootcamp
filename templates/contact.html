@@ -1,0 +1,28 @@
+{% extends "generalLayout.html" %}
+
+{% block contact %}
+    <div class="contact">
+        <div class="profilePic"><img src="{{ url_for('static', filename='assets/profile.svg') }}" alt=""></div>
+        <div class="bigText">
+            <p><span>Hello!</span> I've been</p>
+            <p>waiting for you.</p>
+        </div>
+        <div class="smallText">
+            Fill in the form or <span><a href="mailto:apitester10000@gmail.com">Send me an email</a></span>
+        </div>
+        
+        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{{form_id}}" method="post">
+            
+            <label for="full-name">Full Name</label>
+            <input type="text" name="name" id="full-name" placeholder="What's your name?" required="">
+            <label for="email-address">Email Address</label>
+            <input type="email" name="_replyto" id="email-address" placeholder="Your Email" required="">
+            <label for="message">Message</label>
+            <textarea rows="5" name="message" id="message" placeholder="Write your message" required=""></textarea>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+{% endblock contact %}
