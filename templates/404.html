@@ -1,0 +1,10 @@
+{% extends "generalLayout.html" %}
+
+{% block error404 %}
+    <div class="error404">
+        <img src="{{ url_for('static', filename='assets/error.svg') }}" alt="Error">
+        <div class="bigMessage">Oh no...</div>
+        <div class="smallMessage">Page not found. We suggest to head back home.</div>
+        <a href="/" class="homeButton">Back Home</a>
+    </div>
+{% endblock error404 %}

@@ -29,6 +29,8 @@
         {% block contact %}{% endblock contact %}
     {% elif type=="createblog" %}
         {% block createblog %}{% endblock createblog %}
+    {% elif type=="error404" %}
+        {% block error404 %}{% endblock error404 %}
     {% endif %}
     {% include "footer.html" %}
 

@@ -39,6 +39,10 @@ def singleblog(blog_id):
     cur.close()
     con.commit()
 
+    if not blog:
+        return render_template('404.html', type="error404")
+
+
     return render_template('singleblog.html', type="singleblog", blog_id=blog_id, blog=blog)
 
 @app.route('/about')
@@ -76,6 +80,10 @@ def createblog():
             message = 'An error occured while trying to add the blog.'
 
     return render_template('createblog.html', type="createblog", message=message)
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template('404.html', type="error404")
 
 if __name__=='__main__':
     app.run(debug=True)
