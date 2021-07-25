@@ -363,6 +363,11 @@ nav #menu {
     font-size: 1.3rem;
 }
 
+.singleblog #disqus_thread {
+    margin-top: 20px;
+    width: 75vw;
+}
+
 /* About */
 .about {
     min-height: 78vh;
@@ -645,6 +650,10 @@ footer .logo span:hover {
     border-radius: 5px;
     background: var(--light-mode-black);
     color: var(--light-mode-white);
+}
+
+.error404 .homeButton:hover {
+    box-shadow: 1px 1px 5px 1px var(--light-mode-black);
 }
 
 /* RESPONSIVE DESIGN */
