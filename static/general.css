@@ -83,9 +83,11 @@ nav #menu {
 
 /* Home */
 .home {
+    min-height: 122vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 .home .profilePic {
@@ -166,7 +168,7 @@ nav #menu {
 
 /* Blog */
 .blog {
-    min-height: 78vh;
+    min-height: 122vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -379,6 +381,7 @@ nav #menu {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 .contact .profilePic {
@@ -481,7 +484,7 @@ nav #menu {
     
 .contact form input[type="submit"]  {
     color: var(--light-mode-white);
-    margin: 30px 0 40px 0;
+    margin: 30px 0 20px 0;
     padding: 18px 40px;
     background: var(--light-mode-black);
     border-radius: 30px;
