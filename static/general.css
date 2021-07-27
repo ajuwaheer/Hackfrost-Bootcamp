@@ -83,7 +83,7 @@ nav #menu {
 
 /* Home */
 .home {
-    min-height: 122vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -168,7 +168,7 @@ nav #menu {
 
 /* Blog */
 .blog {
-    min-height: 122vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
