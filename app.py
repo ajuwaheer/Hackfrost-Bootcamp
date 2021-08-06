@@ -51,7 +51,7 @@ def about():
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html', type="contact", form_id="xayadazg")
+    return render_template('contact.html', type="contact", form_id="PUT YOUR OWN FORMSPREE ID HERE")
 
 @app.route('/createblog', methods = ['POST', 'GET'])
 def createblog():
